@@ -40,7 +40,14 @@ const MenuService = {
         return true;
     },
 
-    deleteRecipeFromMenu: () => {
+    deleteRecipeFromMenu: (id) => {
+
+        const recipes = MenuService.listMenuRecipes();
+        const filteredRecipes = recipes.filter((recipe) => {
+            return recipe.id != id;
+        });
+
+        localStorage.setItem('menuRecipes', JSON.stringify(filteredRecipes));
     },
 
     getMenuTotalPrice: () => {
