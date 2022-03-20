@@ -8,6 +8,12 @@ import { Menu } from './components/Menu';
 
 
 function App() {
+
+  let isLoggedIn = false;
+  if (localStorage.getItem('loginToken') != null) {
+    isLoggedIn = true;
+  }
+
   return (
     <React.Fragment>
       <div className="header card text-center">
@@ -23,12 +29,17 @@ function App() {
                 <div className="nav-link">Menu</div>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/login">
-                <div className="nav-link">Login</div>
-              </Link>
-              <a className="nav-link"></a>
-            </li>
+
+            {!isLoggedIn && (
+              <li className="nav-item">
+                <Link to="/login">
+                  <div className="nav-link">Login</div>
+                </Link>
+                <a className="nav-link"></a>
+              </li>
+            )}
+
+
           </ul>
         </div>
       </div>
