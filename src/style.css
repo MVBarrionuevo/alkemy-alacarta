@@ -1,0 +1,15 @@
+.header.card{
+    margin-bottom: 30px;
+}
+
+nav .container-fluid{
+    justify-content: center;
+}
+.content-wrap{
+    display: flex;
+    flex-wrap: wrap
+}
+
+.card{
+    margin: auto;
+}
