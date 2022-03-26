@@ -51,15 +51,33 @@ const MenuService = {
     },
 
     getMenuTotalPrice: () => {
+        const recipes = MenuService.listMenuRecipes();
+        let totalPrice = 0;
+        for (let i = 0; i < recipes.length; i++) {
+            totalPrice += recipes[i].pricePerServing;
+        }
 
+        return totalPrice;
     },
 
     getMenuAvgTime: () => {
+        const recipes = MenuService.listMenuRecipes();
+        let totalTime = 0;
+        for (let i = 0; i < recipes.length; i++) {
+            totalTime += recipes[i].readyInMinutes;
+        }
 
+        return recipes.length > 0 ? totalTime / recipes.length : 0;
     },
 
     getMenuAvgHealthScore: () => {
+        const recipes = MenuService.listMenuRecipes();
+        let totalHealthScore = 0;
+        for (let i = 0; i < recipes.length; i++) {
+            totalHealthScore += recipes[i].healthScore;
+        }
 
+        return recipes.length > 0 ? totalHealthScore / recipes.length : 0;
     }
 };
 

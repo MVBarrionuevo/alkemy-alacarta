@@ -1,15 +1,64 @@
-.header.card{
-    margin-bottom: 30px;
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;900&family=Play:wght@700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+a {
+  text-decoration: none;
 }
 
-nav .container-fluid{
-    justify-content: center;
-}
-.content-wrap{
-    display: flex;
-    flex-wrap: wrap
+nav.navbar div.search-bar {
+  justify-content: space-around;
 }
 
-.card{
-    margin: auto;
+.navbar-brand {
+  margin-left: 15px;
+}
+
+.img-brand {
+  width: 40px;
+}
+
+.jumbotron {
+  background-image: url('./img/photo.jpg');
+  background-size: cover;
+  border-radius: 0px;
+  color: white;
+  text-align: center;
+}
+
+.jumbotron .container {
+  padding: 50px 0px;
+}
+
+.jumbotron-title {
+  margin-bottom: 18px;
+  letter-spacing: 3px;
+}
+
+.lead {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+}
+
+.content-wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px;
+}
+.card {
+  margin: auto;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+@media (min-width: 768px) {
+  .content-wrap {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1280px) {
 }

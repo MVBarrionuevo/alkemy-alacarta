@@ -1,10 +1,12 @@
 import React from 'react';
 import './style.css';
+import logo from './img/logo.png';
 import { Routes, Route, Link } from "react-router-dom";
 import { HomeScreen } from './screens/HomeScreen';
 import { LoginScreen } from './screens/LoginScreen';
 import { NotFoundScreen } from './screens/NotFoundScreen';
 import { Menu } from './components/Menu';
+import { SearchScreen } from './screens/SearchScreen';
 
 
 function App() {
@@ -16,12 +18,18 @@ function App() {
 
   return (
     <React.Fragment>
-      <div className="header card text-center">
-        <div className="card-header">
-          <ul className="nav nav-pills card-header-pills">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a className="navbar-brand" href="#">
+          <img className="img-brand" src={logo} alt="logo-hotel" />
+        </a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
             <li className="nav-item">
               <Link to="/">
-                <div className="nav-link active">Home</div>
+                <div className="nav-link">Home</div>
               </Link>
             </li>
             <li className="nav-item">
@@ -29,7 +37,6 @@ function App() {
                 <div className="nav-link">Menu</div>
               </Link>
             </li>
-
             {!isLoggedIn && (
               <li className="nav-item">
                 <Link to="/login">
@@ -38,14 +45,12 @@ function App() {
                 <a className="nav-link"></a>
               </li>
             )}
-
-
           </ul>
         </div>
-      </div>
+      </nav>
       <Routes>
         <Route path="/" element={<HomeScreen />} />
-        <Route path="/recipes" element={<Menu />} />
+        <Route path="/search" element={<SearchScreen />} />
         <Route path="/login" element={<LoginScreen />} />
       </Routes>
     </React.Fragment>
