@@ -6,7 +6,7 @@ Este proyecto está desarrollado con el objetivo de formar parte de Alkemy!
 
 Aplicación desarrollada para crear una carta de opciones de menús para un hotel, donde se podrá agregar y eliminar diferentes platos y mostrar distintos atributos a nivel individual de cada plato y del menú finalizado.
 
-### `Requerimientos Técnicos`
+### Requerimientos Técnicos
 
 - Creación de componentes reutilizables.
 - Manejo de peticiones HTTP utilizando la librería Axios.
@@ -16,7 +16,7 @@ Aplicación desarrollada para crear una carta de opciones de menús para un hote
 - Manejo de rutas utilizando ReactRouterDom.
 - Creación de alertas utilizando Sweet Alert.
 
-### `Ejecución del proyecto`
+### Ejecución del proyecto
 
 Para ejecutar el proyecto correr el siguiente comando:
 
