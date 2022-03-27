@@ -7,10 +7,10 @@ function Menu(props) {
 
   return (
     <React.Fragment>
+      <div>
+        <h1 className='titleScreen'>Platos </h1>
+      </div>
       <div className='content-wrap'>
-        <div>
-          <h1>Platos </h1>
-        </div>
 
         {recipes.map((recipe, i) => {
           return (
@@ -19,6 +19,7 @@ function Menu(props) {
               id={recipe.id}
               title={recipe.title}
               image={recipe.image}
+              sourceName={recipe.sourceName}
               pricePerServing={recipe.pricePerServing}
               readyInMinutes={recipe.readyInMinutes}
               healthScore={recipe.healthScore}

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;900&family=Play:wght@700&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-a {
-  text-decoration: none;
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 nav.navbar div.search-bar {
@@ -11,6 +11,14 @@ nav.navbar div.search-bar {
 
 .navbar-brand {
   margin-left: 15px;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
+a.nav-link {
+  padding: 0px;
 }
 
 .img-brand {
@@ -35,7 +43,6 @@ nav.navbar div.search-bar {
 }
 
 .lead {
-  font-family: 'Roboto', sans-serif;
   font-size: 22px;
   letter-spacing: 1.5px;
 }
@@ -43,22 +50,213 @@ nav.navbar div.search-bar {
 .content-wrap {
   display: flex;
   flex-direction: column;
-  margin: 30px 0px;
+  padding-bottom: 30px;
 }
 .card {
   margin: auto;
 }
 
-.action-buttons {
+.titleScreen {
+  text-align: center;
+  margin: 35px 0px 25px 0px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.info-container {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+  box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.466);
+}
+
+.info-container h5 {
+  color: #198754;
+  font-weight: bold;
+}
+
+.title-infoContainer {
+  display: none;
+}
+
+.box-infoContainer {
+  padding: 15px;
+}
+
+.box-infoContainer .card-title {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.box-infoContainer i {
+  font-size: 22px;
+  padding-bottom: 10px;
+  color: rgb(59, 58, 58);
+}
+
+.recipes .card-title {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+.recipes .card-text {
+  font-size: 20px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.content-wrap.recipes {
+  padding-bottom: 30px;
+}
+.btn-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn.minus i {
+  font-size: 20px;
+  color: rgba(231, 8, 8, 0.692);
+}
+
+.formLogIn {
+  width: 80%;
+  margin: auto;
+}
+
+.formLogIn .form-group {
+  margin-bottom: 20px;
+}
+
+.btn.logIn {
+  width: 100%;
+  margin: 30px 0px;
+}
+
+.linkLogIn {
+  text-align: right;
+  font-size: 12px;
+}
+
+.footer .card-header {
+  display: flex;
+  flex-direction: column;
+  background-color: #177a4c;
+  color: white;
+  font-size: 18px;
+  padding: 20px 0px;
+}
+
+.i-header i {
+  padding: 10px;
+  font-size: 18px;
+}
+.card-footer {
+  padding: 16px;
+  font-size: 14px;
+}
+
+.footer {
+  border: none;
+  border-radius: 0px;
+}
+
+footer .card-body {
+  background-color: #2e3033;
+  color: rgba(246, 246, 246, 0.87);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+footer .card-body h1 {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: underline #198754;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  color: white;
+}
+footer .card-body p,
+footer .card-body a {
+  font-size: 14px;
+}
+
+.a-links {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
+
+.info-contact {
+  font-size: 14px;
+}
+
+.info-contact i {
+  padding: 10px 10px 10px 0px;
+}
+.info-contact .flex {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
 }
+
+.container-notFound {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.container-notFound h1 {
+  font-size: 20px;
+}
+
+.container-notFound img {
+  width: 50%;
+}
+
 @media (min-width: 768px) {
   .content-wrap {
     flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .title-infoContainer {
+    display: flex;
+    font-size: 14px;
+    color: rgb(59, 58, 58);
+  }
+
+  footer .card-body {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-align: left;
+    padding: 30px 50px;
+  }
+
+  .footer .card-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+
+  .info-card {
+    width: 50%;
+  }
+
+  .container-notFound img {
+    width: 40%;
   }
 }
 
 @media (min-width: 1280px) {
+  .formLogIn {
+    width: 60%;
+  }
+  .container-notFound img {
+    width: 30%;
+  }
 }

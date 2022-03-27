@@ -104,7 +104,7 @@ function HomeScreen() {
                                 {({ errors, touched }) => {
                                     return (
 
-                                        <Form>
+                                        <Form className="d-flex">
                                             <Field name="search" />
                                             <button type="submit" className="btn btn-success" disabled={errors.search}>Buscar</button>
                                         </Form>
@@ -121,37 +121,68 @@ function HomeScreen() {
                     </nav>
                 </div>
             </div>
-
-            <div className='d-flex'>
-                <div className="card">
-                    <div className="card-header">
-                        Precio Total del Menu
-                    </div>
-                    <div className="card-body">
-                        <h5 className="card-title">${MenuService.getMenuTotalPrice()}</h5>
-                    </div>
+            <div className='info-container'>
+                <div className='box-infoContainer'>
+                    <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                    <div className='title-infoContainer'>Precio Total</div>
+                    <div><h5 className="card-title">${MenuService.getMenuTotalPrice()}</h5></div>
                 </div>
-
-                <div className="card">
-                    <div className="card-header">
-                        Promedio de tiempo de Preparacion
-                    </div>
-                    <div className="card-body">
-                        <h5 className="card-title">{MenuService.getMenuAvgTime()} minutos</h5>
-                    </div>
+                <div className='box-infoContainer'>
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <div className='title-infoContainer'>Promedio preparación</div>
+                    <div><h5 className="card-title">{MenuService.getMenuAvgTime()} minutos</h5></div>
                 </div>
-
-                <div className="card">
-                    <div className="card-header">
-                        Promedio de Health Score
-                    </div>
-                    <div className="card-body">
-                        <h5 className="card-title">{MenuService.getMenuAvgHealthScore()} pts</h5>
-                    </div>
+                <div className='box-infoContainer'>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <div className='title-infoContainer'>Health Score</div>
+                    <div><h5 className="card-title">{MenuService.getMenuAvgHealthScore()} pts</h5></div>
                 </div>
             </div>
-
             <Menu recipes={recipes} onDeleteRecipe={onDeleteRecipe} />
+            <footer>
+                <div className=" footer card text-center">
+                    <div className="card-header">
+                        <div>Encontranos en nuestras redes sociales!</div>
+                        <div className='i-header'>
+                            <i className="fa-brands fa-instagram"></i>
+                            <i className="fa-brands fa-twitter"></i>
+                            <i className="fa-brands fa-facebook-f"></i>
+                            <i className="fa-solid fa-at"></i>
+                        </div>
+                    </div>
+                    <div className="card-body">
+                        <div className='info-card'>
+                            <h1>Hotel Victoria</h1>
+                            <p>Hotel 5 estrellas, ubicado en la capital de Córdoba. Se destaca principalmente por su gastronomía.</p>
+                            <p>App <strong>ALACARTA</strong>, exclusiva para uso interno restaurante.</p>
+                        </div>
+                        <div className='links-card'>
+                            <h1>Links</h1>
+                            <div className='a-links'>
+                                <a>Home</a>
+                                <a>Recetas</a>
+                            </div>
+                        </div>
+                        <div className='contact-card'>
+                            <h1>Contacto</h1>
+                            <div className='info-contact'>
+                                <div className='flex'>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>Córdoba, Argentina.</div>
+                                </div>
+                                <div className='flex'>
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                    <div>+54 9 351 6 377841</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className="card-footer text-muted bg-dark">
+                        © 2022 Copyright: vikibarrionuevo@gmail.com
+                    </div>
+                </div>
+            </footer>
         </React.Fragment >
 
     );

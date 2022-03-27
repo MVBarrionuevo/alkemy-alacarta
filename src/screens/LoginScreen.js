@@ -67,19 +67,30 @@ function LoginScreen() {
                     </div>
                 </div>
             ) : (
+
                 <div>
-                    <div className="form-floating mb-3">
-                        <input type="email" onChange={onEmailChange} className="form-control" id="floatingInput" placeholder="email@ejemplo.com" />
-                        <label>Email</label>
-                    </div>
-                    <div className="form-floating">
-                        <input type="password" onChange={onPasswordChange} className="form-control" id="floatingPassword" placeholder="Password" />
-                        <label>Password</label>
-                    </div>
-                    <button onClick={onLoginSubmit}>Ingresar</button>
+                    <div className='titleScreen'>Log In</div>
+                    <form className='formLogIn'>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" onChange={onEmailChange} className="form-control" id="floatingInput" placeholder="email@ejemplo.com" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" onChange={onPasswordChange} className="form-control" id="floatingPassword" placeholder="Password" />
+
+                        </div>
+                        <div className='linkLogIn'>
+                            <a href='#'>¿Olvidaste la contraseña?</a>
+                        </div>
+                        <button className='btn logIn btn-success' onClick={onLoginSubmit}>Ingresar</button>
+                    </form>
+
                 </div>
             )}
         </React.Fragment>
+
+
     );
 }
 

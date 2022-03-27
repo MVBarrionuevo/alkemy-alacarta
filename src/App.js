@@ -5,7 +5,6 @@ import { Routes, Route, Link } from "react-router-dom";
 import { HomeScreen } from './screens/HomeScreen';
 import { LoginScreen } from './screens/LoginScreen';
 import { NotFoundScreen } from './screens/NotFoundScreen';
-import { Menu } from './components/Menu';
 import { SearchScreen } from './screens/SearchScreen';
 
 
@@ -33,8 +32,8 @@ function App() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/recipes">
-                <div className="nav-link">Menu</div>
+              <Link to="/search">
+                <div className="nav-link">Search</div>
               </Link>
             </li>
             {!isLoggedIn && (
@@ -52,6 +51,7 @@ function App() {
         <Route path="/" element={<HomeScreen />} />
         <Route path="/search" element={<SearchScreen />} />
         <Route path="/login" element={<LoginScreen />} />
+        <Route path="*" element={<NotFoundScreen />} />
       </Routes>
     </React.Fragment>
   );

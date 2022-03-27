@@ -13,7 +13,7 @@ function Recipe(props) {
         <span>$${props.pricePerServing}</span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        Tiempo de preparacion
+        Preparación
         <span>${props.readyInMinutes} minutos</span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -25,28 +25,28 @@ function Recipe(props) {
   }
 
   return (
-    <div className='content-wrap'>
-
+    <div className='content-wrap recipes'>
       <div className="card" style={{ width: "18rem" }}>
         <img src={props.image} className="card-img-top" alt="..." />
         <div className="card-body">
+          <h1 className="card-text">{props.sourceName}</h1>
           <h5 className="card-title">{props.title}</h5>
-          <p className="card-text">{props.description}</p>
-          <div className="action-buttons">
+          <div className="btn-action">
             {props.showAddButton && (
-              <button>
-                <i className="fa-solid fa-square-plus"></i>
-              </button>
-            )}
-            {props.showDeleteButton && (
-              <button onClick={() => { props.onDeleteClick(props.id) }}>
-                <i className="fa-solid fa-square-minus"></i>
+              <button className="">
+                <i class="fa-solid fa-square-plus"></i>
               </button>
             )}
 
-            <button onClick={showDetails}>
-              <i className="fa-solid fa-circle-info"></i>
+            <button className="btn btn-outline-secondary" onClick={showDetails}>
+              Más info
             </button>
+            {props.showDeleteButton && (
+              <button className="btn minus" onClick={() => { props.onDeleteClick(props.id) }}>
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            )}
+
 
           </div>
         </div>
