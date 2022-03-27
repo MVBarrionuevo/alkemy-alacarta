@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import logo from './img/logo.png';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import { HomeScreen } from './screens/HomeScreen';
 import { LoginScreen } from './screens/LoginScreen';
 import { NotFoundScreen } from './screens/NotFoundScreen';
@@ -9,6 +9,8 @@ import { SearchScreen } from './screens/SearchScreen';
 
 
 function App() {
+
+  const navigate = useNavigate();
 
   let isLoggedIn = false;
   if (localStorage.getItem('loginToken') != null) {
@@ -31,16 +33,20 @@ function App() {
                 <div className="nav-link">Home</div>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/search">
-                <div className="nav-link">Search</div>
-              </Link>
-            </li>
             {!isLoggedIn && (
               <li className="nav-item">
                 <Link to="/login">
                   <div className="nav-link">Login</div>
                 </Link>
+                <a className="nav-link"></a>
+              </li>
+            )}
+            {isLoggedIn && (
+              <li className="nav-item">
+                <div className="nav-link" onClick={() => {
+                  localStorage.removeItem('loginToken');
+                  navigate('/login')
+                }}>Logout</div>
                 <a className="nav-link"></a>
               </li>
             )}

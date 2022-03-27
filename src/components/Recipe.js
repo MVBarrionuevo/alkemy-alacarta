@@ -20,6 +20,9 @@ function Recipe(props) {
         Health Score
         <span>${props.healthScore} pts</span>
       </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>${props.summary}</span>
+      </li>
     </ul>`
     })
   }
@@ -29,12 +32,13 @@ function Recipe(props) {
       <div className="card" style={{ width: "18rem" }}>
         <img src={props.image} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h1 className="card-text">{props.sourceName}</h1>
-          <h5 className="card-title">{props.title}</h5>
+          <h1 className="card-text">{props.title}</h1>
+          <h5 className="card-title">Vegano: {props.vegan ? 'Si' : 'No'}</h5>
+          <h5 className="card-title" dangerouslySetInnerHTML={{ __html: props.summary }}></h5>
           <div className="btn-action">
             {props.showAddButton && (
-              <button className="">
-                <i class="fa-solid fa-square-plus"></i>
+              <button className="" onClick={() => { props.onAddClick(props.id) }}>
+                <i className="fa-solid fa-square-plus"></i>
               </button>
             )}
 
@@ -43,7 +47,7 @@ function Recipe(props) {
             </button>
             {props.showDeleteButton && (
               <button className="btn minus" onClick={() => { props.onDeleteClick(props.id) }}>
-                <i class="fa-solid fa-trash-can"></i>
+                <i className="fa-solid fa-trash-can"></i>
               </button>
             )}
 

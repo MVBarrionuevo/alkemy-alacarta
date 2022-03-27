@@ -19,7 +19,8 @@ function Menu(props) {
               id={recipe.id}
               title={recipe.title}
               image={recipe.image}
-              sourceName={recipe.sourceName}
+              summary={recipe.summary}
+              vegan={recipe.vegan}
               pricePerServing={recipe.pricePerServing}
               readyInMinutes={recipe.readyInMinutes}
               healthScore={recipe.healthScore}
