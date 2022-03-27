@@ -5,6 +5,21 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.main-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-container {
+  padding-bottom: 297px;
+}
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 297px;
+}
+
 nav.navbar div.search-bar {
   justify-content: space-around;
 }
@@ -67,7 +82,7 @@ a.nav-link {
 .info-container {
   display: flex;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 10px 20px;
   box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.466);
 }
@@ -82,7 +97,7 @@ a.nav-link {
 }
 
 .box-infoContainer {
-  padding: 15px;
+  padding: 15px 40px;
 }
 
 .box-infoContainer .card-title {
@@ -126,7 +141,7 @@ a.nav-link {
   background-color: white;
 }
 
-.btn-add i{
+.btn-add i {
   font-size: 20px;
   color: #177a4c;
 }
@@ -243,15 +258,16 @@ footer .card-body a {
 }
 
 .container-notFound img {
-  width: 50%;
+  width: 30%;
 }
 
 @media (min-width: 768px) {
   .content-wrap {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    padding: 5px 20px;
   }
 
   .title-infoContainer {

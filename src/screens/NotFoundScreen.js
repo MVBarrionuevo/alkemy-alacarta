@@ -9,7 +9,7 @@ function NotFoundScreen(props) {
         <React.Fragment>
             <div>
                 <div className='container-notFound'>
-                    <h1>Oops! No pudimos encontrar resultados para tu búsqueda</h1>
+                    <h1>Oops! No pudimos encontrar la página</h1>
                     <p>ERROR 404</p>
                     <img src={photo} alt='error 404'/>
                 </div>

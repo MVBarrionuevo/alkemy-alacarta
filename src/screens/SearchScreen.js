@@ -94,6 +94,7 @@ function SearchScreen() {
 
             </div>
 
+        
         </React.Fragment>
     );
 }

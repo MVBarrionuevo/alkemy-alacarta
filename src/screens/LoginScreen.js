@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Footer } from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 const axios = require('axios').default;
@@ -89,7 +88,7 @@ function LoginScreen() {
 
                 </div>
             )}
-            < Footer />
+            
         </React.Fragment>
 
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Menu } from '../components/Menu';
-import { Footer } from '../components/Footer';
 import { MenuService } from '../services/MenuService';
 import { SearchBar } from '../components/SearchBar';
 import { Link, useNavigate } from 'react-router-dom';
@@ -53,7 +52,7 @@ function HomeScreen() {
 
             <Menu recipes={recipes} onDeleteRecipe={onDeleteRecipe} />
 
-        <Footer />  
+         
         </React.Fragment >
 
     );
