@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Footer } from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 const axios = require('axios').default;
@@ -62,7 +63,7 @@ function LoginScreen() {
     return (
         <React.Fragment>
             {showSpinner ? (
-                <div className="d-flex justify-content-center">
+                <div className=" spinner d-flex justify-content-center">
                     <div className="spinner-border" role="status">
                     </div>
                 </div>
@@ -88,6 +89,7 @@ function LoginScreen() {
 
                 </div>
             )}
+            < Footer />
         </React.Fragment>
 
 

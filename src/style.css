@@ -121,9 +121,31 @@ a.nav-link {
   align-items: center;
 }
 
+.btn-add {
+  border: none;
+  background-color: white;
+}
+
+.btn-add i{
+  font-size: 20px;
+  color: #177a4c;
+}
+
 .btn.minus i {
   font-size: 20px;
   color: rgba(231, 8, 8, 0.692);
+}
+
+.summary {
+  text-align: left;
+}
+.spinner {
+  padding: 100px 0px;
+}
+
+.spinner .spinner-border {
+  width: 5rem;
+  height: 5rem;
 }
 
 .formLogIn {
@@ -187,6 +209,8 @@ footer .card-body h1 {
 footer .card-body p,
 footer .card-body a {
   font-size: 14px;
+  text-decoration: none;
+  color: rgba(246, 246, 246, 0.87);
 }
 
 .a-links {
@@ -226,6 +250,8 @@ footer .card-body a {
   .content-wrap {
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .title-infoContainer {

@@ -20,8 +20,8 @@ function Recipe(props) {
         Health Score
         <span>${props.healthScore} pts</span>
       </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span>${props.summary}</span>
+      <li class="list-group-item d-flex">
+        <span class="summary">${props.summary}</span>
       </li>
     </ul>`
     })
@@ -36,15 +36,14 @@ function Recipe(props) {
           <h5 className="card-title">Vegano: {props.vegan ? 'Si' : 'No'}</h5>
           <h5 className="card-title" dangerouslySetInnerHTML={{ __html: props.summary }}></h5>
           <div className="btn-action">
-            {props.showAddButton && (
-              <button className="" onClick={() => { props.onAddClick(props.id) }}>
-                <i className="fa-solid fa-square-plus"></i>
-              </button>
-            )}
-
             <button className="btn btn-outline-secondary" onClick={showDetails}>
               Más info
             </button>
+            {props.showAddButton && (
+              <button className="btn-add" onClick={() => { props.onAddClick(props.id) }}>
+                <i className="fa-solid fa-square-plus"></i>
+              </button>
+            )}
             {props.showDeleteButton && (
               <button className="btn minus" onClick={() => { props.onDeleteClick(props.id) }}>
                 <i className="fa-solid fa-trash-can"></i>
